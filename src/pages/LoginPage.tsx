@@ -52,11 +52,6 @@ function NavyPanel() {
         </h2>
 
       </div>
-
-      {/* Footer */}
-      <div className="relative z-10 animate-fade-in delay-300">
-        <p className="text-pb-700 text-xs">Plataforma de Blog Comunitario &copy; 2025</p>
-      </div>
     </div>
   );
 }
