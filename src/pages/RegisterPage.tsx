@@ -40,12 +40,12 @@ function NavyPanel() {
       </svg>
 
       {/* Brand */}
-      <div className="relative z-10 animate-fade-in pl-8">
+      <div className="relative z-10 animate-fade-in pl-12 lg:pl-24 mt-8">
         <span className="font-display font-700 text-white text-3xl tracking-tight">Blog</span>
       </div>
 
       {/* Main copy */}
-      <div className="relative z-10 space-y-5 animate-fade-up delay-100 my-auto lg:pl-16">
+      <div className="relative z-10 space-y-5 animate-fade-up delay-100 my-auto pl-12 lg:pl-24">
         <h2 className="font-display font-700 text-white leading-[1.1]" style={{ fontSize: 'clamp(3rem, 4.5vw, 4rem)' }}>
           Comienza tu<br />historia hoy.
         </h2>
