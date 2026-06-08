@@ -234,15 +234,16 @@ export default function RegisterPage() {
             {/* Avatar */}
             <div>
               <label className="block text-xs font-600 text-slate-500 uppercase tracking-wider mb-2">
-                Foto de perfil (opcional)
+                Foto de perfil
               </label>
               <div
-                className={`border-2 border-dashed rounded-xl p-4 text-center transition-colors ${fieldErrors.avatar ? 'border-red-300' : 'border-pb-100 hover:border-pb-300'}`}
+                className={`border-2 border-dashed rounded-xl p-4 text-center cursor-pointer transition-colors ${fieldErrors.avatar ? 'border-red-300' : 'border-pb-100 hover:border-pb-300'}`}
                 onDragOver={e => e.preventDefault()}
                 onDrop={handleDrop}
+                onClick={() => fileInputRef.current?.click()}
               >
                 {avatarPreview ? (
-                  <div className="flex flex-col items-center gap-2">
+                  <div className="flex flex-col items-center gap-2" onClick={(e) => e.stopPropagation()}>
                     <img src={avatarPreview} alt="Preview" className="w-14 h-14 rounded-full object-cover border-2 border-pb-100" />
                     <button
                       type="button"
@@ -258,10 +259,7 @@ export default function RegisterPage() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     <p className="text-sm text-slate-400">
-                      <button type="button" onClick={() => fileInputRef.current?.click()} className="text-pb-500 font-500 hover:underline">
-                        Sube un archivo
-                      </button>{' '}
-                      o arrastra una imagen
+                      <span className="text-pb-500 font-500">Sube un archivo</span> o arrastra una imagen
                     </p>
                     <p className="text-xs text-slate-300">O pega una URL abajo</p>
                   </div>
